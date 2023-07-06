@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <title>Mediciones PSI de PDVSA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Ingreso de mediciones de válvulas PSI</h1>
+
+        <form id="formulario_mediciones">
+            <label for="pozo">Pozo:</label>
+            <input type="text" name="pozo" id="pozo" required>
+            <label for="valor_psi">Valor PSI:</label>
+            <input type="number" name="valor_psi" id="valor_psi" required>
+            <label for="fecha_hora">Fecha y hora:</label>
+            <input type="date" name="fecha_hora" id="fecha_hora" required>
+            <button type="submit">Guardar medicion</button>
+        </form>
+        <a href="historial.html">Ver historial de mediciones</a>
+        <div id="mensaje"></div>
+    </main>
+    <script src="js/Procesar.js"></script>
+</body>
+
+</html>

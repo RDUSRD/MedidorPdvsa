@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <title>Historial</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="headings">
+            <h1>Historial de mediciones de valvulas PSI</h1>
+            <a href="index.php">Agregar medicion</a>
+        </div>
+
+        <form id="formulario_fechas">
+            <label for="fecha_inicio">Fecha de inicio:</label>
+            <input type="date" name="fecha_inicio" id="fecha_inicio" required>
+            <label for="fecha_fin">Fecha de fin:</label>
+            <input type="date" name="fecha_fin" id="fecha_fin" required>
+            <button type="submit">Mostrar historial</button>
+        </form>
+        <table id="tabla_mediciones">
+            <thead>
+                <tr>
+                    <th>Pozo</th>
+                    <th>Valor PSI</th>
+                    <th>Fecha y hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán las mediciones del historial -->
+            </tbody>
+        </table>
+        <canvas id="grafica_mediciones"></canvas>
+    </main>
+    <script src="js/Grafico.js"></script>
+
+</body>
+
+</html>
